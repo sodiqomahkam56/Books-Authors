@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Kitob tafsiloti
+{% endblock %}
+
+{% block content %}
+  <div class="container mt-4">
+    <h2>{{ book.title }}</h2>
+    <p><strong>Muallif:</strong> {{ book.author }}</p>
+    <p><strong>Tavsif:</strong> {{ book.description }}</p>
+    <p><strong>Narxi:</strong> {{ book.price }} $</p>
+    <p><strong>Yaralgan:</strong> {{ book.created_at }} </p>
+    <a href="{% url 'book-list' %}" class="btn btn-secondary mt-3">Ortga qaytish</a>
+  </div>
+{% endblock %}
